@@ -10,14 +10,19 @@ public class ShieldActive : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Boundary")
+       /* if (other.tag == "Boundary")
         {
             return;
-        }
+        }*/
 
         if(other.tag == "Powerup")
         {
             shield.gameObject.SetActive(true);
+        }
+
+        if(other.tag == "Enemy")
+        {
+            shield.gameObject.SetActive(false);
         }
     }
 }

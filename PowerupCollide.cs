@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PowerupCollide : MonoBehaviour {
 
+    public GameObject PowerS;
+
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Boundary")
@@ -13,7 +15,8 @@ public class PowerupCollide : MonoBehaviour {
 
         if (other.tag == "Player" || other.tag == "Shield")
         {
-            Destroy(gameObject);
-        }
+            //PowerS.SetActive(false);
+            Destroy(PowerS);
+        } 
     }
 }
